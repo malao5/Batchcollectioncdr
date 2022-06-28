@@ -18,7 +18,7 @@ public class Batchcollectioncdr {
         String filePath = System.getProperty("user.dir")+File.separator;
 
         BufferedReader br = new BufferedReader(new FileReader(filePath+"1.txt"));
-        //Reader fr =new FileReader("F:\\正纳文档\\新标签\\cdr批量采集\\1.txt");
+
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath+"2.txt", true));
 
         BufferedWriter bww= new BufferedWriter(new FileWriter(System.getProperty("user.dir")+File.separator+"wrong.txt", true));
@@ -123,14 +123,9 @@ public class Batchcollectioncdr {
                     String rs2=rs1.replaceAll("[\\-|——]","");
                     if(rs2.length()>=10 && rs2.length()<=12) {
                         list.add(line+":"+rs2);
-                    }else {
-                        listwrong.add(line);
                     }
-                }else {
-                    listwrong.add(line);
                 }
-            }else {
-                listwrong.add(line);
+
             }
 
         }
